@@ -19,7 +19,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
-export default function CardWithForm() {
+export default function Page1() {
   return (
     <div className="flex justify-center items-center h-screen">
     

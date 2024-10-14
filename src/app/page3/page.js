@@ -52,21 +52,19 @@ export default function Page3() {
 
 			<Dialog>
 				<DialogTrigger>
-					<Button>Settings</Button>
+					<Button>0</Button>
 				</DialogTrigger>
 				<DialogContent>
 					<DialogHeader>
-						<DialogTitle>Are you absolutely sure?</DialogTitle>
+						<DialogTitle>Change Value to Zero?</DialogTitle>
 
 						<DialogDescription>
-							<Button onClick={setNumberZero}>Zeruj</Button>
+							<Button onClick={setNumberZero}>Yes</Button>
 						</DialogDescription>
 					</DialogHeader>
 				</DialogContent>
 			</Dialog>
 		</div>
 
-		//hover card dla przycisku
-		//dialog który po otworzeniu ma przycisk który kasuje licznik do 0 ezzzas
 	);
 }

@@ -1,8 +1,8 @@
-import { ContextMenuDemo } from "@/src/components/ContextMenu";
-import { DialogDemo } from "@/src/components/Dialog";
-import { HoverCardDemo } from "@/src/components/HoverCard";
+import { ContextMenuDemo } from "@/components/ContextMenu";
+import { DialogDemo } from "@/components/Dialog";
+import { HoverCardDemo } from "@/components/HoverCard";
 
-export default function Strona3sigmadingadongabonga(){
+export default function Strona2(){
     return(
         <div>
             <HoverCardDemo>sigmadingasztongaponga</HoverCardDemo>

@@ -1,37 +1,72 @@
-'use client'
-import { Button } from "@/components/ui/button"
-import {useState} from 'react'
-  
-export default function Page3(){
+"use client";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import {
+	HoverCard,
+	HoverCardContent,
+	HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from "@/components/ui/dialog";
 
-    const [number, setNumber] = useState(0)
+export default function Page3() {
+	const [number, setNumber] = useState(0);
 
-    const addNumber = () => {
-        setNumber(number + 1)
-    }
-    
-    const notAddNumber = () => {
-        setNumber(number - 1)
-    }
+	const addNumber = () => {
+		setNumber(number + 1);
+	};
 
-    return (
-        <div className="flex flex-col justify-center items-center h-screen gap-5">
-           
-    <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"> 
-      {number}
-    </h2>
+	const notAddNumber = () => {
+		setNumber(number - 1);
+	};
 
-        <br></br>
+	const setNumberZero = () => {
+		setNumber(0);
+	};
 
-<div className="flex gap-10">
-<Button onClick={notAddNumber}>-1</Button>
-<Button onClick={addNumber}>+1</Button>
-</div>
+	return (
+		<div className='flex flex-col justify-center items-center h-screen gap-5'>
+			<HoverCard>
+				<HoverCardTrigger>
+					<h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl'>
+						{number}
+					</h1>
+				</HoverCardTrigger>
+				<HoverCardContent>Your number is: {number}</HoverCardContent>
+			</HoverCard>
 
-        </div>
-       
-//hover card dla przycisku
-//dialog który po otworzeniu ma przycisk który kasuje licznik do 0 ezzzas
+			<br></br>
 
-    )
+			<div className='flex gap-10'>
+				<Button onClick={notAddNumber}>-1</Button>
+				<Button onClick={addNumber}>+1</Button>
+			</div>
+
+			<br></br>
+
+			<Dialog>
+				<DialogTrigger>
+					<Button>Settings</Button>
+				</DialogTrigger>
+				<DialogContent>
+					<DialogHeader>
+						<DialogTitle>Are you absolutely sure?</DialogTitle>
+
+						<DialogDescription>
+							<Button onClick={setNumberZero}>Zeruj</Button>
+						</DialogDescription>
+					</DialogHeader>
+				</DialogContent>
+			</Dialog>
+		</div>
+
+		//hover card dla przycisku
+		//dialog który po otworzeniu ma przycisk który kasuje licznik do 0 ezzzas
+	);
 }
